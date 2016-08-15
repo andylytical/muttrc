@@ -1,0 +1,17 @@
+source ~/.mutt/general.muttrc
+source ~/.mutt/indexes.muttrc
+source ~/.mutt/reading.muttrc
+source ~/.mutt/writing.muttrc
+source ~/.mutt/printing.muttrc
+source ~/.mutt/aliases.muttrc
+source ~/.mutt/macros.muttrc
+
+folder-hook GWorkMail/* source ~/.mutt/uiuc_gmail.muttrc
+
+folder-hook EWorkMail/* source ~/.mutt/uiuc_exchange.muttrc
+
+# Default mailbox when mutt starts
+set spoolfile = "+GWorkMail/All Mail"
+
+# which mailboxes to check for new mail
+mailboxes "+GWorkMail/All Mail" +EWorkMail/INBOX

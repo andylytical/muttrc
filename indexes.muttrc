@@ -1,0 +1,36 @@
+# Do not mark unread msgs Old after restarting mutt
+set mark_old=no
+
+# Check for new mail even when the mailbox is open
+set check_new
+
+# Automatically delete messages marked for delete when quiting 
+set delete=yes
+
+# Resolve email address to friendly user name if address is in aliases
+set reverse_alias=yes
+
+# How to sort messages in the index menu
+# Set sorting for all folders to thread
+folder-hook . set sort=threads
+
+# Display only these headers
+ignore *
+unignore From Subject Date Reply-To To Cc
+unignore Resent-Reply-To Resent-From Resent-Date
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+
+# The following regexp helps identify replies used for threading messages
+set reply_regexp="^(re|aw|sv):[ \t]*"
+
+# Specify names of mailing lists
+#lists istp_watch@ncsa.uiuc.edu
+#subscribe istp_watch@ncsa.uiuc.edu
+
+# Show split window with message index on top and message contents below
+set pager_index_lines=10
+
+# Set the default save hook
+#save-hook .* +Archive
+
+color status white cyan

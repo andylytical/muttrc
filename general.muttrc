@@ -1,0 +1,6 @@
+set folder=~/.mail/   #reference this directory below with '+'
+
+set mbox_type=Maildir
+
+# Send mail in the background
+set sendmail_wait=-1

@@ -1,0 +1,13 @@
+### Settings specific to UIUC Exchange
+
+# Default read mail folder
+set mbox=+EWorkMail/Archive
+# Do not move read mail to read mail folder
+set move=no
+
+# File to cc outgoing messages in
+#set record="+EWorkMail/sent-mail"
+
+set postponed = +EWorkMail/Drafts
+
+color status black green

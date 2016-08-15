@@ -1,0 +1,13 @@
+### Settings specific to UIUC Gmail
+
+# Default read mail folder
+set mbox = "+GWorkMail/All Mail"
+# Do not move read mail to read mail folder
+set move=no
+
+set postponed = +GWorkMail/Drafts
+
+color status white blue
+
+macro index,pager S "<save-message>+GWorkMail/Spam<enter>" "mark message as spam"
+macro index,pager D "<save-message>+GWorkMail/Trash<enter>" "move message to the trash"

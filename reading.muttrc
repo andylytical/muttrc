@@ -1,0 +1,17 @@
+# don't put '+' at the beginning of wrapped lines
+set markers=no
+
+# Specify the order of the headers when reading mail
+hdr_order Date: From: Reply-To: To: Cc: Subject: 
+
+# Auto decode html using .mailcap settings
+auto_view text/html
+auto_view text/calendar
+
+# this helps with multipart messages
+alternative_order text/plain text/html
+
+# how to sort
+set sort = threads
+set sort_browser = reverse-date
+set sort_aux = reverse-last-date-received

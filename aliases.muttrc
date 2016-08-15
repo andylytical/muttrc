@@ -1,0 +1,6 @@
+# Default alias file
+set alias_file=~/.mutt/aliases/aliases
+
+# Import alias files
+source ~/.mutt/aliases/ncsa_aliases
+source ~/.mutt/aliases/aliases

@@ -1,0 +1,19 @@
+### map keyboard shortcuts
+set pipe_split=yes
+set pipe_decode=yes
+set wait_key="no"
+
+# Ctl-f => ~/bin/fm
+macro index,pager "\cf" '<sync-mailbox><pipe-entry>/home/aloftus/bin/fm<enter>'
+
+# View tasklist
+#macro pager,index "\cl" '<pipe-entry>task|less<enter>'
+
+# Fwd vcal invite to gmail
+macro attach "<esc>g" '<pipe-entry>~/bin/vcal2gmail<enter>'
+
+# Add vcal invite to task as mtg with due date
+macro attach "\ct" '<pipe-entry>~/bin/parse_vcal|~/bin/task_add_cal<enter>'
+
+# Delete TSM junk
+#macro index "\cv" '<delete-pattern>~b "ANR0422W|ANR0424W|ANR0425W|ANR0470W|ANR0480W|ANR0539W|ANR2567W|ANR2568E|ANR2579E|ANR2597W|ROSCOE"<enter><sync-mailbox>'

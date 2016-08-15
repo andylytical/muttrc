@@ -1,0 +1,40 @@
+
+set editor='vim + -c "set textwidth=72" -c "set wrap"'
+
+# Attach forwarded message as a mime part?
+# See also: http://wiki.mutt.org/?MuttFaq/Attachment
+set mime_forward=no
+set mime_forward_decode=no
+set mime_forward_rest=no
+
+# Add custom headers
+my_hdr Bcc: aloftus@illinois.edu
+my_hdr Reply-to: aloftus@illinois.edu
+
+# Set name
+set realname="Andy Loftus"
+set from="aloftus@illinois.edu"
+set use_from=yes
+
+# Do not prompt for recipient address when replying; subject when forwarding
+# only relevant if autoedit is disabled
+set fast_reply
+
+# Do not include a copy of the orginal message in a reply
+set include=no
+
+# Generate "Mail-Followup-To" header when sending mail to mailing lists
+# Lists must be specified using 'lists'
+set followup_to
+
+# Remove reply-to header for if mail is going to a mailing list
+send-hook '~l' 'unmy_hdr Reply-to'
+
+# Do not ask for confimation when appending mail message to a folder
+unset confirmappend
+
+# Subject of forwarded message is just the subject itself
+set forward_format="[%s]"
+
+# Do not add hostname to outgoing addresses
+set hidden_host
